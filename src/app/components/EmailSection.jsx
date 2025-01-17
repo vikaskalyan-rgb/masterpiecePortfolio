@@ -118,7 +118,7 @@ Message: ${formData.message}
         </p>
 
         <div className="mt-6">
-          <h3 className="font-bold text-xl">Contact Details:</h3>
+          <h3 className="font-bold text-xl text-black">Contact Details:</h3>
           <p className="text-black"><strong>N Kalyan</strong></p>
           <p className="text-black"><strong>Phone:</strong> 7304420600 | 9994445388</p>
           <p className="text-black"><strong>Masterpiece</strong></p>
