@@ -114,7 +114,7 @@ Message: ${formData.message}
           Let&apos;s Connect
         </h5>
         <p>
-          We're here to help and always excited to connect! Whether you have a question, feedback, or simply want to discuss a potential project, feel free to reach out to us. We value every conversation and strive to respond promptly. Your thoughts and ideas are important to us. Please don't hesitate to contact us through the form on the right or use the details below. We look forward to hearing from you soon and working together to bring your vision to life!
+          Were here to help and always excited to connect! Whether you have a question, feedback, or simply want to discuss a potential project, feel free to reach out to us. We value every conversation and strive to respond promptly. Your thoughts and ideas are important to us. Please dont hesitate to contact us through the form on the right or use the details below. We look forward to hearing from you soon and working together to bring your vision to life!
         </p>
 
         <div className="mt-6">

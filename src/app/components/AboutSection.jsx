@@ -1,7 +1,6 @@
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
-import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
@@ -61,16 +60,16 @@ const AboutSection = () => {
            Our strength lies in our deep understanding of both the aesthetic and economic needs of our clients.
            We create realistic visual representations of your home before starting any work, ensuring you can visualize your space transformation.
            Our polishing and finishes are among the best in the industry, providing durability and elegance.
-           We operate with the highest standards of integrity, always prioritizing our clients' satisfaction and trust.<br></br><br></br>
+           We operate with the highest standards of integrity, always prioritizing our clients satisfaction and trust.<br></br><br></br>
            Located in Chennai, our state-of-the-art manufacturing unit spans 6,000 square feet and is equipped with the latest machinery imported from Europe.
            This allows us to deliver precision, quality, and innovation in every project.
-           In today's world, with limited budgets and building restrictions, we understand the importance of transforming your space to meet both practical needs and personal vision.
+           In todays world, with limited budgets and building restrictions, we understand the importance of transforming your space to meet both practical needs and personal vision.
            The kitchen is often the heart of the home, and the living room serves as the gathering space for family and friends, making it essential to design them with care and attention. 
            The bedroom, a sanctuary for relaxation, deserves a design that promotes peace and comfort. 
             We are committed to helping you create such spaces, turning even the most challenging areas into stress-free retreats.
             We would be honored to be part of your journey in transforming your home into a space that truly reflects your style and needs. 
             Please feel free to explore some of our completed projects in the images below.
-            For any further inquiries or clarifications, please don’t hesitate to contact us. We look forward to working with you!
+            For any further inquiries or clarifications, please dont hesitate to contact us. We look forward to working with you!
           </p>
           {/* <div className="flex flex-row justify-start mt-8 text-black">
             <TabButton
