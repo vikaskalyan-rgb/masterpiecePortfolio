@@ -119,10 +119,10 @@ Message: ${formData.message}
 
         <div className="mt-6">
           <h3 className="font-bold text-xl">Contact Details:</h3>
-          <p><strong>N Kalyan</strong></p>
-          <p><strong>Phone:</strong> 7304420600 | 9994445388</p>
-          <p><strong>Masterpiece</strong></p>
-          <p><strong>Factory Address:</strong> Noothanjeri Road, Madambakkam</p>
+          <p className="text-black"><strong>N Kalyan</strong></p>
+          <p className="text-black"><strong>Phone:</strong> 7304420600 | 9994445388</p>
+          <p className="text-black"><strong>Masterpiece</strong></p>
+          <p className="text-black"><strong>Factory Address:</strong> Noothanjeri Road, Madambakkam</p>
         </div>
       </div>
       <div className="z-10 relative">
