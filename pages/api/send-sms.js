@@ -1,25 +1,16 @@
 // pages/api/send-sms.js
-// pages/api/send-sms.js
 import twilio from 'twilio';
-
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
 const BUSINESS_PHONE = '+919994445388';
 
 export default async function handler(req, res) {
-  // Allow only POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Extract formData from the request body
   const { formData } = req.body;
-
-  // Validate incoming data
-  if (!formData || !formData.name || !formData.phone || !formData.email || !formData.message) {
-    return res.status(400).json({ error: 'Missing required fields' });
-  }
 
   try {
     const client = twilio(accountSid, authToken);
@@ -36,18 +27,16 @@ export default async function handler(req, res) {
 Received on: ${new Date().toLocaleString()}
     `.trim();
 
-    // Send SMS
     await client.messages.create({
       body: smsMessage,
       to: BUSINESS_PHONE,
       from: twilioPhone
     });
 
-    // Respond with success
     res.status(200).json({ success: true });
   } catch (error) {
     console.error('SMS sending failed:', error);
-    res.status(500).json({ error: 'Failed to send SMS. Please try again later.' });
+    res.status(500).json({ error: error.message });
   }
 }
 //email:masterpieceinteriors1204@gmail.com
