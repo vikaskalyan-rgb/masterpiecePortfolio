@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
 import ProjectTagDropdown from "./ProjectTagDropdown";
+import VideoCarousel from "./VideoCorousel";
 
 const projectsData = [
   {
@@ -461,9 +462,11 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="px-4">
-      <h2 className="text-center text-4xl font-bold text-black mt-4 mb-6 md:mb-8">
-      Our Most Recent Projects
+      <div><h2 className="text-center text-4xl font-bold text-black mt-4 mb-1">
+      Recent Projects
       </h2>
+      <VideoCarousel/></div>
+      
 
       {/* Reduced margin between title and dropdown */}
       <ProjectTagDropdown selectedTag={tag} handleTagChange={handleTagChange} />

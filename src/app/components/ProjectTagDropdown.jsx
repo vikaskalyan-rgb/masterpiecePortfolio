@@ -4,23 +4,27 @@ const ProjectTagDropdown = ({ selectedTag, handleTagChange }) => {
   return (
     <div className="relative w-full max-w-[16rem] mx-auto">
       <select
-        className="appearance-none text-[#252525] border border-gray-300 bg-gray-50 text-sm px-3 py-2 cursor-pointer w-full 
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out 
-        hover:bg-white hover:border-blue-400 shadow-sm"
+        className="block w-full px-4 py-3 text-base rounded-lg border-2 border-gray-200
+                   bg-white text-gray-700 font-medium
+                   appearance-none cursor-pointer
+                   shadow-sm hover:shadow-md
+                   transition-all duration-300 ease-in-out
+                   focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100
+                   hover:border-blue-400"
         value={selectedTag}
         onChange={(e) => handleTagChange(e.target.value)}
       >
-        <option value="All">All</option>
-        <option value="Tv Unit">Tv Unit</option>
-        <option value="Pooja Unit">Pooja Unit</option>
-        <option value="Modular Kitchen">Modular Kitchen</option>
-        <option value="Bedroom">Bedroom</option>
+        <option value="All" className="py-2">All Projects</option>
+        <option value="Tv Unit" className="py-2">TV Unit</option>
+        <option value="Pooja Unit" className="py-2">Pooja Unit</option>
+        <option value="Modular Kitchen" className="py-2">Modular Kitchen</option>
+        <option value="Bedroom" className="py-2">Bedroom</option>
       </select>
 
-      {/* Custom Arrow */}
+      {/* Enhanced Custom Arrow */}
       <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
         <svg
-          className="w-4 h-4 text-gray-500"
+          className="w-5 h-5 text-gray-600 transition-transform duration-300 group-hover:text-blue-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -37,6 +41,3 @@ const ProjectTagDropdown = ({ selectedTag, handleTagChange }) => {
 };
 
 export default ProjectTagDropdown;
-
-
-
