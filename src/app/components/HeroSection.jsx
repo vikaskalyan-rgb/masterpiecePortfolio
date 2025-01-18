@@ -36,7 +36,7 @@ const HeroSection = () => {
               className="text-[#C0504F]"
             />
           </h1>
-          <p className="text-[#252525] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#252525] text-left text-base sm:text-lg mb-6 lg:text-xl">
           At MasterPiece Interiors, we blend traditional craftsmanship with modern machinery to create stunning, functional spaces.
            With a keen understanding of both aesthetic and economic needs, we design and build custom solutions that reflect your vision.
             Our team of experts ensures top-tier finishes and exceptional quality, all while adhering to ethical business practices.
