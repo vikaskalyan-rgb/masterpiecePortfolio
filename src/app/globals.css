@@ -3,26 +3,112 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Elegant Interior Design Color Palette */
+  --primary: 45, 35, 30;        /* Rich Dark Brown */
+  --secondary: 218, 205, 188;    /* Warm Beige */
+  --accent: 156, 133, 98;        /* Muted Gold */
+  --light: 250, 248, 245;        /* Off White */
+  --dark: 25, 20, 18;            /* Deep Charcoal */
+  
+  --foreground-rgb: var(--dark);
+  --background-rgb: var(--light);
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: var(--light);
+    --background-rgb: var(--dark);
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+/* Elegant Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgb(var(--primary));
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Elegant Hover Effects */
+a, button {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgb(var(--accent));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Subtle Shadow for Depth */
+.card, .section {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+/* Video Carousel Custom Pagination Only */
+.video-swiper-custom .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: #d6cdbf !important;
+  opacity: 0.5 !important;
+  transition: all 0.3s ease;
+}
+
+.video-swiper-custom .swiper-pagination-bullet-active {
+  width: 32px !important;
+  height: 10px !important;
+  border-radius: 5px !important;
+  background: linear-gradient(135deg, #92400e 0%, #b45309 100%) !important;
+  opacity: 1 !important;
+}
+
+.video-swiper-custom .swiper-pagination-bullet:hover {
+  opacity: 0.8 !important;
+  transform: scale(1.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #92400e;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
 }

@@ -4,9 +4,13 @@ const NavLink = ({ href, title }) => {
   return (
     <Link
       href={href}
-      className="block py-2 pl-3 pr-4 text-[#252525] sm:text-xl rounded md:p-0 hover:text-black"
+      className="group relative block py-2 text-stone-700 hover:text-amber-800 transition-colors duration-300"
     >
-      {title}
+      <span className="text-sm font-light tracking-wide uppercase">
+        {title}
+      </span>
+      {/* Animated Underline */}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-800 group-hover:w-full transition-all duration-300 ease-out"></span>
     </Link>
   );
 };
